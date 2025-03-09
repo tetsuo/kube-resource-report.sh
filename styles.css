@@ -1,0 +1,151 @@
+:root {
+  --border-color: #d1d9e0;
+  --table-row-background: #ffffff;
+  --table-row-alt-background: #f6f8fa;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-size: 16px;
+  --line-height: 1.56;
+  --link-color: #1a0dab;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent double scrolling */
+    display: flex;
+    background-color: #fff;
+    color: #111;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling */
+    height: 100vh; /* Ensure full height */
+    flex-shrink: 0; /* Prevent shrinking */
+    border-right: 0.25em solid var(--border-color);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling */
+    height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 250px;
+        border-right: none;
+    }
+
+    .content {
+        flex: none;
+        height: calc(100vh - 250px);
+    }
+}
+body {
+  font-family: sans-serif;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  font-variant: tabular-nums;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid var(--border-color);
+}
+
+table td > :last-child {
+  margin-bottom: 0;
+}
+
+table tr {
+  background-color: var(--table-row-background);
+  border-top: 1px solid var(--border-color);
+}
+
+table tr:nth-child(2n) {
+  background-color: var(--table-row-alt-background);
+}
+
+table img {
+  background-color: transparent;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+  height: 0.25em;
+  padding: 0;
+  margin: 1.5rem 0;
+  background-color: var(--border-color);
+  border: 0;
+}
